@@ -1,1 +1,27 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Food Shopping Form</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<img src="https://static.vecteezy.com/system/resources/thumbnails/000/108/676/small/free-food-pyramid-vector.png" alt="Food image">
+</head>
+<body>
+	<h1>Food Shopping Form</h1>
+	<form method="POST" action="">
+		<label for="item1">Item 1:</label>
+		<input type="text" name="item1" id="item1" required>
+		<label for="item2">Item 2:</label>
+		<input type="text" name="item2" id="item2" required>
+		<label for="item3">Item 3:</label>
+		<input type="text" name="item3" id="item3" required>
+		<label for="item4">Item 4:</label>
+		<input type="text" name="item4" id="item4" required>
+		<label for="item5">Item 5:</label>
+		<input type="text" name="item5" id="item5" required>
+		<input type="submit" value="Submit">
+	</form>
+	{% if item1 %}
+		<p>You need to buy {{ item1 }}, {{ item2 }}, {{ item3 }}, {{ item4 }}, and {{ item5 }}.</p>
+	{% endif %}
+</body>
+</html>

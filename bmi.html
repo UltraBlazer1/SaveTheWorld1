@@ -1,1 +1,22 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BMI Calculator</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<img src="https://pilates1901.com/wp-content/uploads/2015/01/bmi-pics.jpg" alt="BMI Image">
+</head>
+<body>
+	<h1>BMI Calculator</h1>
+	<form method="POST" action="">
+		<label for="weight">Weight (in kg):</label>
+		<input type="number" name="weight" id="weight" step="0.1" required>
+		<label for="height">Height (in meters):</label>
+		<input type="number" name="height" id="height" step="0.01" required>
+		<input type="submit" value="Calculate">
+	</form>
+	{% if bmi %}
+		<p>Your BMI is {{ bmi }}.</p>
+	{% endif %}
+</body>
+</html

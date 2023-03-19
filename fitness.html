@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fitness Planner</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<img src="https://static.vecteezy.com/system/resources/thumbnails/008/954/619/small/4k-animation-of-a-young-man-doing-sit-up-exercise-on-a-floor-mat-sit-up-workout-with-a-flat-boy-character-animated-regular-sit-up-exercise-with-a-man-character-4k-footage-free-video.jpg" alt="Fitness Image">
+</head>
+<body>
+	<h1>Fitness Planner</h1>
+	<form method="POST" action="">
+		<label for="activity">Activity:</label>
+		<input type="text" name="activity" id="activity" required>
+		<label for="duration">Duration (in minutes):</label>
+		<input type="number" name="duration" id="duration" required>
+		<label for="date">Date:</label>
+		<input type="date" name="date" id="date" required>
+		<input type="submit" value="Submit">
+	</form>
+	{% if activity %}
+		<p>You have planned {{ duration }} minutes of {{ activity }} on {{ date }}.</p>
+	{% endif %}
+
+<h2>Exercise Videos</h2>
+
+  <ul>
+    <li><a href="https://www.youtube.com/watch?v=bDjeRqqQu2A" target="_blank">7 Minute Workout</a></li>
+    <li><a href="https://www.youtube.com/watch?v=j7rKKpwdXNE" target="_blank">Yoga for Beginners</a></li>
+    <li><a href="https://www.youtube.com/watch?v=iTM98dTBHAA" target="_blank">Pilates for Core Strength</a></li>
+  </ul>
+
+  <footer>
+    <p>&copy; 2023 Fitness Planner</p>
+  </footer>
+</body>
+</html>
 
